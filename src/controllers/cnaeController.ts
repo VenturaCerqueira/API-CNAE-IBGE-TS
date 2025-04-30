@@ -31,7 +31,7 @@ export const getCnaeClasseSubclasse = async (req: Request, res: Response): Promi
               const codigo = `${subclasse.id}`;
               const descricao = subclasse.descricao;
 
-              // Verifica se o registro já existe no array
+              
               if (!processedData.some(item => item.Codigo === codigo && item.Descricao === descricao)) {
                 processedData.push({
                   Codigo: codigo,
@@ -44,7 +44,7 @@ export const getCnaeClasseSubclasse = async (req: Request, res: Response): Promi
             const codigo = `${classeId}00`;
             const descricao = classe.descricao;
 
-            // Verifica se o registro já existe no array
+            
             if (!processedData.some(item => item.Codigo === codigo && item.Descricao === descricao)) {
               processedData.push({
                 Codigo: codigo,
