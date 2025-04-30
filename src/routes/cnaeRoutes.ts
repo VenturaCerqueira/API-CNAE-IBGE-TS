@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getCnaeData } from '../controllers/cnaeController'; // Importa a função do controller
+import { getCnaeClasseSubclasse } from '../controllers/cnaeController';
 
 const router = Router();
 
@@ -12,14 +12,14 @@ const router = Router();
 
 /**
  * @swagger
- * /api/cnae-data:
+ * /api/cnae-classe-subclasse:
  *   get:
- *     summary: Retorna lista de dados CNAE processados
+ *     summary: Retorna todos os CNAEs com classe e subclasse
  *     tags: [CNAE]
- *     description: Busca dados das classes CNAE da API do IBGE e retorna uma lista formatada com Código, Descrição e Percentual (fixo em 0.00).
+ *     description: Busca todos os CNAEs com o código concatenado de classe e subclasse.
  *     responses:
  *       200:
- *         description: Lista de dados CNAE retornada com sucesso.
+ *         description: Lista de CNAEs retornada com sucesso.
  *         content:
  *           application/json:
  *             schema:
@@ -29,20 +29,17 @@ const router = Router();
  *                 properties:
  *                   Codigo:
  *                     type: string
- *                     description: Identificador da classe CNAE.
- *                     example: "01113"
+ *                     description: Código completo do CNAE (classe + subclasse).
+ *                     example: "9609207"
  *                   Descricao:
  *                     type: string
- *                     description: Descrição da classe CNAE.
- *                     example: "Cultivo de cereais"
+ *                     description: Descrição da subclasse ou classe.
+ *                     example: "CULTIVO DE CEREAIS"
  *                   Percentual:
  *                     type: number
- *                     format: float
- *                     description: Valor percentual fixo.
- *                     example: 0.00
- *       500:
- *         description: Erro interno no servidor ao buscar ou processar os dados.
+ *                     description: Percentual fixo.
+ *                     example: 0.0
  */
-router.get('/cnae-data', getCnaeData);
+router.get('/cnae-classe-subclasse', getCnaeClasseSubclasse);
 
 export default router;

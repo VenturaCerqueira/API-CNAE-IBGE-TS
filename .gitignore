@@ -1,0 +1,31 @@
+# Node.js
+node_modules/
+dist/
+build/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações do editor
+.vscode/
+.idea/
+*.swp
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Cache do TypeScript
+*.tsbuildinfo
+
+# Outros
+coverage/

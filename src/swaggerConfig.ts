@@ -9,19 +9,17 @@ const options: swaggerJsdoc.Options = {
       description: 'API para buscar e formatar dados CNAE do IBGE, documentada com Swagger.',
       contact: {
         name: 'Keep Informática - Desenvolvimento',
-
+        email: 'contato@keepinformatica.com.br',
       },
     },
     servers: [
       {
-        url: `http://localhost:${process.env.PORT || 3000}/api`, 
+        url: `http://localhost:${process.env.PORT || 3000}`,
         description: 'Servidor de Desenvolvimento',
       },
-      
     ],
   },
-  
-  apis: ['./src/routes/*.ts'], 
+  apis: ['./src/routes/*.ts'], // Inclui as rotas documentadas na pasta routes
 };
 
 const swaggerSpec = swaggerJsdoc(options);
