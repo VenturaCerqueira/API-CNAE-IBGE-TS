@@ -6,8 +6,8 @@ const router = Router();
 /**
  * @swagger
  * tags:
- *   name: CNAE
- *   description: Operações relacionadas à Classificação Nacional de Atividades Econômicas
+ *   - name: CNAE
+ *     description: Operações relacionadas à Classificação Nacional de Atividades Econômicas
  */
 
 /**
