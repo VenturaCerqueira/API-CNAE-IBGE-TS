@@ -1,9 +1,15 @@
+![image](https://github.com/user-attachments/assets/ac86aeb6-5672-4d1a-8fda-0da478cd706d)
 
 # 📊 API CNAE Processada
 
 API para buscar e formatar dados da Classificação Nacional de Atividades Econômicas (CNAE) fornecidos pelo IBGE. <br>
 A API retorna informações de classe e subclasse com códigos concatenados e dados organizados.
-
+```bash 
+https://api-cnae-ibge-ts.onrender.com/api-docs/
+```
+```bash
+https://api-cnae-ibge-ts.onrender.com/api/cnae-classe-subclasse
+```
 ---
 
 ## 🚀 Funcionalidades
