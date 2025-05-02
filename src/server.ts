@@ -4,7 +4,7 @@ import swaggerUi from 'swagger-ui-express';
 import swaggerSpec from './swaggerConfig';
 
 const app: Application = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 1000;
 
 // Middlewares
 app.use(express.json());
